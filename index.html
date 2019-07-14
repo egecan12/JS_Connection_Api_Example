@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Object Prototypes | COMP1073 Client-Side JavaScript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!-- STEP 1: Build out a HEADER and a SECTION element -->
+
+	<script>
+		// //this is first way to do it
+		const requestURL = "https://api.jsonbin.io/b/5d2814bd3bfb607d04111ad7";
+
+		// const request = new XMLHttpRequest();
+
+		// request.open("GET", requestURL);
+
+		// request.responseType = "json";
+
+		// request.send();
+
+		// request.addEventListener('load', function name(params) {
+		// 	const iScreamInc = request.response;
+			
+		// 	console.log(iScreamInc);
+		// })
+
+		//new way to do it
+
+		async function getJSON() {
+			
+			const res = await fetch(requestURL);
+			const data = await res.json();
+			console.log(data);
+			
+		}
+
+			getJSON();
+
+
+
+
+		// This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+
+		// A special thanks to https://openclipart.org/detail/285225/ice-cream-cones for the awesome ice cream cone illustrations
+	</script>
+</body>
+
+</html>
